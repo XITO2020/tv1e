@@ -451,7 +451,9 @@ def _lead_emails(email: str, name: str, message: str, source: str, lead_id: int)
         "À très vite,\n"
         "Naïm — tuveuxun.expert\n"
     )
-    send_mail(email, "tuveuxun.expert — votre message est bien arrivé", ack_body)
+    # Reply-To = ta boite : tuveuxun.expert n'a pas de MX (ne recoit rien), une reponse directe du prospect
+    # a l'expediteur reviendrait en erreur -> lead perdu.
+    send_mail(email, "tuveuxun.expert — votre message est bien arrivé", ack_body, reply_to=LEAD_NOTIFY_EMAIL or None)
 
     if LEAD_NOTIFY_EMAIL:
         notif = (
