@@ -36,3 +36,30 @@ _backup*/
 *.webm
 *.mov
 *.mkv
+# Cles, certificats, identifiants (jamais dans git, meme "pour tester")
+*.pem
+*.key
+*.p12
+*.pfx
+acme.json
+id_rsa*
+*.secret
+# Archives de deploiement (peuvent embarquer un .env ou la base) — regenerees par deploy-online.sh
+*.tgz
+*.tar.gz
+*.zip
+# Bases SQLite (en plus de *.db) + journaux
+*.sqlite
+*.sqlite3
+logs/
+# Caches Python / outils
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+# Editeurs / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
