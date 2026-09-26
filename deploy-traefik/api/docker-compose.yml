@@ -7,6 +7,10 @@ services:
     container_name: tuveuxun-api
     network_mode: host
     restart: unless-stopped
+    # Secrets email (Mailjet SMTP + LEAD_NOTIFY_EMAIL) : fichier SUR LE SERVEUR uniquement,
+    # /docker/tuveuxun-api/.env.email (chmod 600), jamais dans git (ignore par .env.*).
+    env_file:
+      - .env.email
     environment:
       - OLLAMA_URL=http://127.0.0.1:11434
       - BOT_MODEL=qwen2.5:3b
