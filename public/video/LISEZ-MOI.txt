@@ -1,0 +1,9 @@
+Depose ici ton intro Blender sous le nom exact : intro.mp4
+
+La video est scrubee au scroll dans le Hero 2 (Le Monde des Agents).
+Si le fichier est absent, la couche video est simplement ignoree.
+
+Encodage recommande pour un scrub fluide - keyframes rapprochees :
+  ffmpeg -i rendu-blender.mp4 -c:v libx264 -g 5 -pix_fmt yuv420p -an intro.mp4
+
+Format conseille : 1920x1080, 10 a 20 s, sans audio.

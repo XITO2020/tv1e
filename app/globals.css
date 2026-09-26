@@ -1,0 +1,484 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-geist-sans: 'Geist', system-ui, sans-serif;
+    --font-geist-mono: 'Geist Mono', monospace;
+    --obsidian: #0A0A0C;
+    --carbon: #14141A;
+    --graphite: #1F1F26;
+    --aqua: #D4ECEF;
+    --aqua-deep: #B8DAE2;
+    --teal: #1a5e63;
+    --teal-deep: #0F3D40;
+    --teal-night: #0A2E33;
+    --accent: #5AD4B6;
+    --accent-dim: #3FA890;
+    --ash: #5A5A66;
+    --ink: #0A0A0C;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--obsidian);
+    color: var(--aqua);
+    font-family: var(--font-saira), system-ui, sans-serif;
+    font-feature-settings: "ss01", "ss03";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--obsidian);
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* B — Cyberterminal Index : Saira light tracking generous, uppercase */
+  .display-cyber-h1 {
+    font-family: var(--font-saira);
+    font-size: clamp(36px, 6.5vw, 96px);
+    font-weight: 200;
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+  .display-cyber-h2 {
+    font-family: var(--font-saira);
+    font-size: clamp(28px, 4.5vw, 64px);
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+  }
+
+  /* C — Editorial Tarifs : Saira condensed-feel light */
+  .display-edit-h1 {
+    font-family: var(--font-saira);
+    font-size: clamp(40px, 6.5vw, 96px);
+    font-weight: 200;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .display-edit-h2 {
+    font-family: var(--font-saira);
+    font-size: clamp(30px, 4.5vw, 64px);
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+  }
+
+  /* A — Sovereign Parcours : Saira very light, mixed weights */
+  .display-sov-h1 {
+    font-family: var(--font-saira);
+    font-size: clamp(36px, 6vw, 88px);
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: 0.005em;
+  }
+  .display-sov-h1 .accent {
+    font-weight: 500;
+  }
+  .display-sov-h2 {
+    font-family: var(--font-saira);
+    font-size: clamp(26px, 4vw, 56px);
+    font-weight: 200;
+    line-height: 1.05;
+    letter-spacing: 0.005em;
+  }
+
+  /* Generic display fallback */
+  .display-h1 {
+    font-family: var(--font-saira);
+    font-size: clamp(36px, 6vw, 88px);
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.005em;
+  }
+  .display-h2 {
+    font-family: var(--font-saira);
+    font-size: clamp(26px, 4vw, 56px);
+    font-weight: 200;
+    line-height: 1.05;
+  }
+  .display-h3 {
+    font-family: var(--font-saira);
+    font-size: clamp(22px, 3vw, 36px);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+
+  /* Gradient bg-clip — accent driven, no vert pomme */
+  .grad-fusion {
+    background: linear-gradient(110deg, #5AD4B6 0%, #B8DAE2 50%, #1a5e63 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: grad-shift 12s ease-in-out infinite;
+  }
+
+  /* Home only — vert volt original */
+  .grad-volt {
+    background: linear-gradient(110deg, #D4FF00 0%, #49DE8A 45%, #1a5e63 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: grad-shift 12s ease-in-out infinite;
+  }
+  .grad-volt-mint {
+    background: linear-gradient(135deg, #D4FF00 0%, #49DE8A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .grad-mint {
+    background: linear-gradient(135deg, #5AD4B6 0%, #D4ECEF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .grad-deep {
+    background: linear-gradient(180deg, #5AD4B6 0%, #1a5e63 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .grad-volt-ember {
+    background: linear-gradient(110deg, #5AD4B6 0%, #D4ECEF 50%, #5AD4B6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: grad-shift 10s ease-in-out infinite;
+  }
+
+  @keyframes grad-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  /* Civilization Beyond Earth notched corner clip-path */
+  .clip-civ-sm {
+    clip-path: polygon(
+      8px 0,
+      calc(100% - 8px) 0,
+      100% 8px,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      8px 100%,
+      0 calc(100% - 8px),
+      0 8px
+    );
+  }
+  .clip-civ-md {
+    clip-path: polygon(
+      14px 0,
+      calc(100% - 14px) 0,
+      100% 14px,
+      100% calc(100% - 14px),
+      calc(100% - 14px) 100%,
+      14px 100%,
+      0 calc(100% - 14px),
+      0 14px
+    );
+  }
+  .clip-civ-asym {
+    /* Single notched top-right + bottom-left, rectilinear elsewhere */
+    clip-path: polygon(
+      0 0,
+      calc(100% - 18px) 0,
+      100% 18px,
+      100% 100%,
+      18px 100%,
+      0 calc(100% - 18px)
+    );
+  }
+
+  /* Scanline overlay (B) */
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 2px,
+      rgba(90, 212, 182, 0.025) 2px,
+      rgba(90, 212, 182, 0.025) 3px
+    );
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  /* HUD label */
+  .hud-label {
+    font-family: var(--font-mono-display);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .hud-label::before {
+    content: '◇ ';
+    margin-right: 4px;
+  }
+
+  /* Eyebrow utilities */
+  .eyebrow {
+    font-family: var(--font-mono-display);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ash);
+  }
+  .eyebrow-volt,
+  .eyebrow-accent {
+    font-family: var(--font-mono-display);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* Regle generique AVANT les delais : sans elle, tout enfant au-dela de la
+   liste restait a opacity 0 pour toujours (cartes 7 a 9 de l'equipe, 12/09). */
+.reveal-stagger.visible > * { opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.16s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.24s; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.32s; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.40s; }
+.reveal-stagger.visible > *:nth-child(7) { transition-delay: 0.48s; }
+.reveal-stagger.visible > *:nth-child(8) { transition-delay: 0.56s; }
+.reveal-stagger.visible > *:nth-child(9) { transition-delay: 0.64s; }
+
+/* Batterie faible / economie d'energie declenche souvent prefers-reduced-motion :
+   sans ce fallback, les reveals restaient a opacity 0 et le contenu disparaissait
+   (cards equipe a-propos invisibles en mobile, Naim 22/09). */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-stagger > * { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+@keyframes pulse-volt {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(90, 212, 182, 0.4); }
+  50%      { box-shadow: 0 0 0 12px rgba(90, 212, 182, 0); }
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-pulse-volt { animation: pulse-volt 2.4s ease-in-out infinite; }
+.animate-marquee { animation: marquee 60s linear infinite; will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+.marquee-pause:hover .animate-marquee { animation-play-state: paused; }
+
+/* ============================================================
+   CHROME-HOVER — effet acier trempe qui prend la lumiere
+   - Sheen sweep diagonal qui balaie l'element au hover
+   - Inner highlight top + inner shadow bottom = profondeur metal
+   - Outer glow accent turquoise + drop shadow = relief
+   - Soft tint screen-blend (gradient turquoise-cream) qui apparait
+   ============================================================ */
+.chrome-hover {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chrome-hover > * {
+  position: relative;
+  z-index: 2;
+}
+/* Soft chrome tint — screen blend gradient */
+.chrome-hover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(212, 236, 239, 0.10) 25%,
+    rgba(212, 236, 239, 0.22) 50%,
+    rgba(90, 212, 182, 0.14) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease-out;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+/* Sheen sweep diagonal */
+.chrome-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.35) 47%,
+    rgba(212, 236, 239, 0.75) 50%,
+    rgba(255, 255, 255, 0.35) 53%,
+    transparent 65%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+.chrome-hover:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(212, 236, 239, 0.22),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(90, 212, 182, 0.4),
+    0 8px 22px rgba(0, 0, 0, 0.35);
+}
+.chrome-hover:hover::before { opacity: 1; }
+.chrome-hover:hover::after  { left: 150%; }
+
+/* Variante chrome solide pour fonds clairs (cream/aqua) — sheen + soft glow */
+.chrome-hover-light {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.chrome-hover-light > * { position: relative; z-index: 2; }
+.chrome-hover-light::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  transition: left 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+.chrome-hover-light:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2),
+    0 0 24px rgba(90, 212, 182, 0.55),
+    0 6px 18px rgba(212, 255, 0, 0.25);
+}
+.chrome-hover-light:hover::after { left: 150%; }
+
+/* Hero canvas fadeout — apres 40s, descend lentement vers opacite 0.2 sur 6s */
+@keyframes canvas-fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0.2; }
+}
+.canvas-fade {
+  animation: canvas-fadeout 6s cubic-bezier(0.16, 1, 0.3, 1) 20s forwards;
+}
+
+
+/* ── Houle oceanique au survol — page Tarifs (02/09) ──────────────────
+   Remplace les verts clairs (emerald/lime) des cards forfaits. Une nappe
+   de lumiere monte dans la carte et ondule doucement, comme une vague qui
+   passe sous la surface. Purement decoratif : pointer-events none, et la
+   couche ne s'anime QUE pendant le survol (aucun cout au repos). */
+.wave-hover {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.wave-hover::before {
+  content: '';
+  position: absolute;
+  inset: -40% -25%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(55% 42% at 22% 72%, rgba(127, 212, 232, 0.30), transparent 62%),
+    radial-gradient(46% 34% at 78% 42%, rgba(182, 234, 247, 0.20), transparent 60%),
+    radial-gradient(70% 50% at 50% 100%, rgba(46, 139, 168, 0.55), transparent 70%);
+  opacity: 0;
+  transform: translate3d(0, 34%, 0);
+  transition: opacity 520ms ease, transform 1200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.wave-hover:hover::before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  animation: swell 7s ease-in-out infinite;
+}
+.wave-hover > * {
+  position: relative;
+  z-index: 1;
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(-3%, 0, 0) scaleY(1);
+  }
+  50% {
+    transform: translate3d(3%, -5%, 0) scaleY(1.07);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave-hover:hover::before {
+    animation: none;
+  }
+}

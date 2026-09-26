@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tarifs — Consultant IA pour PME, mairies et associations. Forfaits fermes, devis 48h, livrables cle-en-main. Naim Mouloud, SASU Tabasco City.">
+<title>Tarifs — tuveuxun.expert</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   tuveuxun.expert — pastel bubble ultra-color
+   ============================================================ */
+
+:root {
+  /* Palette pastel candy — pas de blanc */
+  --bg-base: #FFF6E9;
+  --bg-shell: #FFEFD9;
+  --bg-blush: #FFD9E0;
+  --bg-mint: #CDF5DC;
+  --bg-honey: #FFE5B0;
+  --bg-lavender: #E5D8FF;
+  --bg-sky: #BEE7F5;
+  --bg-peach: #FFD6BA;
+
+  --accent-coral: #FF7A8E;
+  --accent-grape: #7E5BD2;
+  --accent-citrus: #FF9F47;
+  --accent-mint-strong: #3CCB8E;
+  --accent-sky-strong: #45B6E0;
+
+  --text-deep: #2D2545;
+  --text-muted: #6B5A8E;
+  --text-soft: #8A7BAE;
+  --ink-blush: #A23E59;
+  --ink-mint: #16704A;
+  --ink-grape: #4D2F9A;
+
+  --border-soft: rgba(45, 37, 69, 0.08);
+  --border-medium: rgba(45, 37, 69, 0.16);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 12px;
+  --radius-md: 22px;
+  --radius-lg: 36px;
+  --radius-xl: 48px;
+
+  --max-width: 1280px;
+
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --shadow-puffy:
+    0 1px 2px rgba(45, 37, 69, 0.04),
+    0 4px 8px rgba(45, 37, 69, 0.04),
+    0 12px 24px rgba(45, 37, 69, 0.06),
+    0 24px 48px rgba(45, 37, 69, 0.08);
+  --shadow-puffy-hover:
+    0 2px 4px rgba(45, 37, 69, 0.06),
+    0 8px 16px rgba(45, 37, 69, 0.08),
+    0 20px 40px rgba(45, 37, 69, 0.10),
+    0 40px 80px rgba(45, 37, 69, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-deep);
+  background: var(--bg-base);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  cursor: none;
+}
+
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+/* ============================================================
+   BACKGROUND : MESH GRADIENT ANIMATED + DECORATIVE STICKERS
+   ============================================================ */
+
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    conic-gradient(from 0deg at 20% 30%, var(--bg-honey), var(--bg-base) 25%),
+    conic-gradient(from 90deg at 80% 20%, var(--bg-blush), transparent 35%),
+    conic-gradient(from 180deg at 70% 80%, var(--bg-mint), transparent 30%),
+    conic-gradient(from 270deg at 15% 75%, var(--bg-lavender), transparent 35%),
+    var(--bg-base);
+  filter: blur(60px);
+  opacity: 0.7;
+  animation: mesh-drift 60s linear infinite;
+}
+
+@keyframes mesh-drift {
+  0% { transform: rotate(0deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1.1); }
+}
+
+/* Floating stickers (decorative confetti, NON-orbe) */
+.sticker {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  animation: sticker-float 12s ease-in-out infinite;
+}
+
+.sticker-1 { top: 8%;  left: 6%;  animation-duration: 14s; animation-delay: 0s; }
+.sticker-2 { top: 22%; right: 8%; animation-duration: 18s; animation-delay: -3s; }
+.sticker-3 { top: 55%; left: 4%;  animation-duration: 16s; animation-delay: -6s; }
+.sticker-4 { top: 70%; right: 5%; animation-duration: 13s; animation-delay: -9s; }
+.sticker-5 { top: 35%; left: 50%; animation-duration: 20s; animation-delay: -2s; }
+.sticker-6 { top: 88%; left: 22%; animation-duration: 15s; animation-delay: -5s; }
+.sticker-7 { top: 15%; left: 45%; animation-duration: 17s; animation-delay: -7s; }
+.sticker-8 { top: 60%; right: 30%; animation-duration: 14s; animation-delay: -4s; }
+
+@keyframes sticker-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33%      { transform: translateY(-30px) rotate(15deg); }
+  66%      { transform: translateY(20px) rotate(-10deg); }
+}
+
+/* Big morphing blob — page-anchor decorative */
+.blob-anchor {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  width: 480px;
+  height: 480px;
+  opacity: 0.55;
+}
+
+.blob-1 { top: -120px; right: -160px; }
+.blob-2 { top: 1100px; left: -180px; }
+.blob-3 { top: 2200px; right: -140px; }
+
+/* ============================================================
+   CUSTOM CURSOR (magnetic blob)
+   ============================================================ */
+
+.cursor {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-coral) 0%, var(--accent-grape) 100%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
+  transition: transform 0.18s var(--ease-out), background 0.4s var(--ease-out), width 0.25s var(--ease-spring), height 0.25s var(--ease-spring);
+  transform: translate(-50%, -50%);
+  filter: blur(0.5px);
+}
+
+.cursor.hover-card {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, var(--accent-citrus) 0%, var(--accent-coral) 100%);
+}
+
+.cursor.hover-link {
+  width: 56px;
+  height: 56px;
+  background: radial-gradient(circle, var(--accent-mint-strong) 0%, var(--accent-grape) 100%);
+}
+
+@media (max-width: 768px) { .cursor { display: none; } }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.site-header {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: calc(100% - 32px);
+  max-width: 1240px;
+  background: rgba(255, 246, 233, 0.7);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid var(--border-soft);
+  border-radius: 100px;
+  padding: 12px 24px;
+  box-shadow: var(--shadow-puffy);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: var(--text-deep);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: italic;
+}
+
+.logo .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-citrus) 100%);
+  box-shadow: 0 0 0 4px rgba(255, 122, 142, 0.18);
+  animation: dot-bounce 2.4s ease-in-out infinite;
+}
+
+@keyframes dot-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 100px;
+  transition: all 0.3s var(--ease-out);
+}
+
+.nav-links a:hover {
+  color: var(--text-deep);
+  background: var(--bg-honey);
+}
+
+.nav-links a.active {
+  color: var(--ink-blush);
+  background: var(--bg-blush);
+}
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-citrus) 100%);
+  color: var(--bg-base);
+  padding: 10px 22px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: 0 4px 12px rgba(255, 122, 142, 0.25);
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px) rotate(-1.5deg);
+  box-shadow: 0 8px 20px rgba(255, 122, 142, 0.4);
+}
+
+@media (max-width: 768px) { .nav-links { display: none; } }
+
+/* ============================================================
+   HERO TARIFS
+   ============================================================ */
+
+.hero-tarifs {
+  padding: 200px 0 80px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: var(--bg-mint);
+  border: 1.5px solid var(--accent-mint-strong);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-mint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent-mint-strong);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(60, 203, 142, 0.25);
+}
+
+.hero-tarifs h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 8vw, 88px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: 28px;
+  color: var(--text-deep);
+}
+
+.hero-tarifs h1 .holo {
+  background: linear-gradient(110deg,
+    var(--accent-coral) 0%,
+    var(--accent-citrus) 25%,
+    var(--accent-grape) 50%,
+    var(--accent-mint-strong) 75%,
+    var(--accent-sky-strong) 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 700;
+  animation: holo-shift 8s ease-in-out infinite;
+}
+
+@keyframes holo-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+.hero-tarifs .tagline {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+.hero-tarifs .tagline strong {
+  color: var(--text-deep);
+  font-weight: 600;
+}
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-grape);
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-lavender);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 56px;
+  line-height: 1.05;
+  max-width: 760px;
+  color: var(--text-deep);
+}
+
+.section-title em {
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(110deg, var(--accent-coral), var(--accent-grape));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Squiggle separator */
+.squiggle {
+  width: 100%;
+  height: 32px;
+  margin: 40px 0;
+  display: block;
+  opacity: 0.6;
+}
+
+/* ============================================================
+   FORFAITS GRID — puffy cards, color per card
+   ============================================================ */
+
+.forfaits {
+  padding: 80px 0 60px;
+  position: relative;
+}
+
+.forfaits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 1024px) {
+  .forfaits-grid { grid-template-columns: 1fr; }
+}
+
+.forfait-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  transition: transform 0.5s var(--ease-spring), box-shadow 0.5s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-puffy);
+  border: 1.5px solid var(--border-soft);
+}
+
+.forfait-card.card-mint {
+  background: var(--bg-mint);
+}
+.forfait-card.card-mint .forfait-name { color: var(--ink-mint); }
+
+.forfait-card.card-peach {
+  background: var(--bg-peach);
+}
+.forfait-card.card-peach .forfait-name { color: var(--ink-blush); }
+
+.forfait-card.card-lavender {
+  background: var(--bg-lavender);
+}
+.forfait-card.card-lavender .forfait-name { color: var(--ink-grape); }
+
+.forfait-card:hover {
+  transform: translateY(-8px) rotate(-0.8deg);
+  box-shadow: var(--shadow-puffy-hover);
+}
+
+.forfait-card.featured {
+  transform: scale(1.04);
+  z-index: 3;
+}
+
+.forfait-card.featured:hover {
+  transform: translateY(-8px) scale(1.04) rotate(0.5deg);
+}
+
+.forfait-card.featured::after {
+  content: '⭐ Best-seller';
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  background: var(--text-deep);
+  color: var(--bg-honey);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 100px;
+  box-shadow: 0 6px 16px rgba(45, 37, 69, 0.25);
+  transform: rotate(3deg);
+}
+
+.forfait-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: var(--bg-base);
+  border: 2px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 24px;
+  box-shadow:
+    0 2px 4px rgba(45, 37, 69, 0.06),
+    0 6px 12px rgba(45, 37, 69, 0.08);
+  transform: rotate(-4deg);
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.forfait-card:hover .forfait-icon {
+  transform: rotate(6deg) scale(1.08);
+}
+
+.forfait-name {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  font-style: italic;
+}
+
+.forfait-target {
+  font-size: 14px;
+  color: var(--text-deep);
+  opacity: 0.75;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.forfait-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.forfait-price .amount {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--text-deep);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.forfait-card.featured .forfait-price .amount {
+  background: linear-gradient(110deg, var(--accent-coral), var(--accent-citrus), var(--accent-grape));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: holo-shift 6s ease-in-out infinite;
+}
+
+.forfait-price .currency {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.forfait-duration {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: 28px;
+  font-weight: 500;
+}
+
+.forfait-features {
+  list-style: none;
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.forfait-features li {
+  font-size: 14px;
+  color: var(--text-deep);
+  padding: 10px 0;
+  padding-left: 32px;
+  position: relative;
+  border-top: 1.5px dashed var(--border-medium);
+  line-height: 1.5;
+}
+
+.forfait-features li:first-child { border-top: none; }
+
+.forfait-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 22px;
+  height: 22px;
+  background: var(--bg-base);
+  border: 2px solid var(--text-deep);
+  border-radius: 50%;
+  box-shadow: 2px 2px 0 var(--text-deep);
+}
+
+.forfait-features li::after {
+  content: '✓';
+  position: absolute;
+  left: 5px;
+  top: 11px;
+  font-size: 14px;
+  color: var(--text-deep);
+  font-weight: 900;
+}
+
+.forfait-cta {
+  display: block;
+  text-align: center;
+  padding: 16px 24px;
+  background: var(--bg-base);
+  border: 2px solid var(--text-deep);
+  border-radius: 100px;
+  color: var(--text-deep);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all 0.25s var(--ease-spring);
+  box-shadow: 4px 4px 0 var(--text-deep);
+}
+
+.forfait-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--text-deep);
+}
+
+.forfait-cta:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--text-deep);
+}
+
+.forfait-card.featured .forfait-cta {
+  background: var(--text-deep);
+  color: var(--bg-honey);
+}
+
+.forfait-card.featured .forfait-cta:hover {
+  background: var(--ink-blush);
+  color: var(--bg-base);
+}
+
+/* ============================================================
+   SUR MESURE BANNER
+   ============================================================ */
+
+.sur-mesure {
+  padding: 60px 0;
+}
+
+.sur-mesure-card {
+  background: var(--bg-sky);
+  border: 2px solid var(--text-deep);
+  border-radius: var(--radius-lg);
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 var(--text-deep);
+}
+
+.sur-mesure-card .corner-deco {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 48px;
+  transform: rotate(20deg);
+  opacity: 0.3;
+}
+
+.sur-mesure-card h3 {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+  font-style: italic;
+  color: var(--text-deep);
+}
+
+.sur-mesure-card p {
+  color: var(--text-deep);
+  opacity: 0.75;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.sur-mesure-price {
+  text-align: right;
+}
+
+.sur-mesure-price .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.sur-mesure-price .range {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--ink-blush);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-style: italic;
+}
+
+.sur-mesure-price .unit {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sur-mesure-card { grid-template-columns: 1fr; padding: 36px; }
+  .sur-mesure-price { text-align: left; }
+}
+
+/* ============================================================
+   MODULES COMPLEMENTAIRES
+   ============================================================ */
+
+.modules { padding: 80px 0; }
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .modules-grid { grid-template-columns: 1fr; }
+}
+
+.module-row {
+  background: var(--bg-shell);
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 26px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.3s var(--ease-spring);
+}
+
+.module-row:nth-child(2n) { background: var(--bg-honey); }
+.module-row:nth-child(3n) { background: var(--bg-blush); }
+.module-row:nth-child(5n) { background: var(--bg-lavender); }
+
+.module-row:hover {
+  transform: translateX(8px) rotate(-0.5deg);
+  border-color: var(--text-deep);
+  box-shadow: var(--shadow-puffy);
+}
+
+.module-info h4 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-style: italic;
+  color: var(--text-deep);
+}
+
+.module-info p {
+  font-size: 13px;
+  color: var(--text-deep);
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.module-price {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--ink-blush);
+  white-space: nowrap;
+  font-style: italic;
+}
+
+/* ============================================================
+   GARANTIES
+   ============================================================ */
+
+.garanties { padding: 80px 0; }
+
+.garanties-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .garanties-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.garantie {
+  text-align: center;
+  padding: 36px 22px;
+  background: var(--bg-base);
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  transition: all 0.4s var(--ease-spring);
+  box-shadow: var(--shadow-puffy);
+}
+
+.garantie:nth-child(1) { background: var(--bg-blush); }
+.garantie:nth-child(2) { background: var(--bg-mint); }
+.garantie:nth-child(3) { background: var(--bg-honey); }
+.garantie:nth-child(4) { background: var(--bg-lavender); }
+
+.garantie:hover {
+  transform: translateY(-6px) rotate(2deg);
+  box-shadow: var(--shadow-puffy-hover);
+}
+
+.garantie-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--bg-base);
+  border: 2px solid var(--text-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-deep);
+  box-shadow: 3px 3px 0 var(--text-deep);
+}
+
+.garantie-text {
+  font-size: 14px;
+  color: var(--text-deep);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+
+.final-cta { padding: 120px 0; text-align: center; position: relative; }
+
+.final-cta-card {
+  background: var(--bg-blush);
+  border: 2px solid var(--text-deep);
+  border-radius: var(--radius-xl);
+  padding: 88px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 12px 12px 0 var(--text-deep);
+}
+
+.final-cta-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, var(--bg-honey) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, var(--bg-lavender) 0%, transparent 50%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.final-cta-card > * { position: relative; z-index: 2; }
+
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 20px;
+  color: var(--text-deep);
+  font-style: italic;
+}
+
+.final-cta h2 em {
+  font-style: italic;
+  background: linear-gradient(110deg, var(--accent-coral), var(--accent-grape));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.final-cta p {
+  font-size: 18px;
+  color: var(--text-deep);
+  opacity: 0.8;
+  max-width: 580px;
+  margin: 0 auto 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--text-deep);
+  color: var(--bg-honey);
+  padding: 18px 36px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-spring);
+  border: 2px solid var(--text-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 4px 4px 0 var(--ink-blush);
+}
+
+.btn-primary:hover {
+  transform: translate(-2px, -2px) rotate(-1deg);
+  box-shadow: 8px 8px 0 var(--ink-blush);
+}
+
+.btn-secondary {
+  background: var(--bg-base);
+  color: var(--text-deep);
+  padding: 18px 36px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s var(--ease-spring);
+  border: 2px solid var(--text-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 4px 4px 0 var(--accent-grape);
+}
+
+.btn-secondary:hover {
+  transform: translate(-2px, -2px) rotate(1deg);
+  box-shadow: 8px 8px 0 var(--accent-grape);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer {
+  padding: 60px 0 40px;
+  background: var(--bg-shell);
+  border-top: 2px dashed var(--border-medium);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: italic;
+  color: var(--text-deep);
+}
+
+.footer-brand .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-citrus) 100%);
+  box-shadow: 0 0 0 4px rgba(255, 122, 142, 0.18);
+}
+
+.footer-tagline {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 320px;
+}
+
+.footer-col h5 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-grape);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+
+.footer-col a {
+  color: var(--text-deep);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s var(--ease-out);
+  border-bottom: 1.5px solid transparent;
+}
+
+.footer-col a:hover {
+  color: var(--ink-blush);
+  border-bottom-color: var(--accent-coral);
+}
+
+.footer-bottom {
+  padding-top: 32px;
+  border-top: 2px dashed var(--border-medium);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-spring), transform 0.6s var(--ease-spring);
+}
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.24s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.36s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.48s; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.60s; opacity: 1; transform: translateY(0); }
+
+</style>
+</head>
+<body>
+
+<!-- Mesh gradient background -->
+<div class="bg-mesh"></div>
+
+<!-- Custom cursor -->
+<div class="cursor"></div>
+
+<!-- Decorative stickers floating -->
+<svg class="sticker sticker-1" width="42" height="42" viewBox="0 0 42 42">
+  <path d="M21 2 L26 16 L40 16 L29 25 L33 39 L21 30 L9 39 L13 25 L2 16 L16 16 Z"
+        fill="#FF7A8E" stroke="#2D2545" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
+<svg class="sticker sticker-2" width="36" height="36" viewBox="0 0 36 36">
+  <circle cx="18" cy="18" r="14" fill="#7E5BD2" stroke="#2D2545" stroke-width="2.5"/>
+  <circle cx="18" cy="18" r="6" fill="#FFE5B0"/>
+</svg>
+<svg class="sticker sticker-3" width="48" height="48" viewBox="0 0 48 48">
+  <rect x="6" y="6" width="36" height="36" rx="10" transform="rotate(15 24 24)"
+        fill="#3CCB8E" stroke="#2D2545" stroke-width="2.5"/>
+</svg>
+<svg class="sticker sticker-4" width="38" height="38" viewBox="0 0 38 38">
+  <path d="M19 4 Q34 4, 34 19 Q34 34, 19 34 Q4 34, 4 19 Q4 4, 19 4 Z"
+        fill="#FF9F47" stroke="#2D2545" stroke-width="2.5"/>
+  <path d="M12 19 L17 24 L26 14" fill="none" stroke="#2D2545" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="sticker sticker-5" width="32" height="32" viewBox="0 0 32 32">
+  <polygon points="16,3 29,29 3,29" fill="#FFD9E0" stroke="#2D2545" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
+<svg class="sticker sticker-6" width="40" height="40" viewBox="0 0 40 40">
+  <path d="M20 4 L24 14 L36 16 L27 24 L30 36 L20 30 L10 36 L13 24 L4 16 L16 14 Z"
+        fill="#BEE7F5" stroke="#2D2545" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
+<svg class="sticker sticker-7" width="28" height="28" viewBox="0 0 28 28">
+  <circle cx="14" cy="14" r="11" fill="#FFD6BA" stroke="#2D2545" stroke-width="2.5"/>
+</svg>
+<svg class="sticker sticker-8" width="44" height="44" viewBox="0 0 44 44">
+  <path d="M22 4 L28 18 L42 22 L28 26 L22 40 L16 26 L2 22 L16 18 Z"
+        fill="#E5D8FF" stroke="#2D2545" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
+
+<!-- Big morphing blob anchors -->
+<svg class="blob-anchor blob-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#FFD9E0" stroke="#2D2545" stroke-width="2">
+    <animate attributeName="d" dur="14s" repeatCount="indefinite"
+      values="M44.7,-65.3C57.1,-54.5,65.7,-39.5,71.6,-23.2C77.5,-6.9,80.7,10.7,75.4,25.6C70,40.5,56.1,52.7,40.6,61.1C25.1,69.5,8.1,74.1,-9.3,73.3C-26.7,72.5,-44.5,66.2,-56.4,54.3C-68.3,42.4,-74.3,24.9,-75.5,7C-76.7,-10.9,-73.1,-29.3,-63.1,-42.4C-53.1,-55.5,-36.7,-63.3,-20.8,-67.6C-4.9,-71.9,10.5,-72.7,25.7,-71.3C40.9,-69.9,55.9,-66.2,44.7,-65.3Z;
+              M51.4,-72.5C64.7,-62.6,72.6,-45.7,76.3,-28.4C80,-11.1,79.5,6.6,72.9,21.3C66.3,36,53.6,47.7,39.2,55.7C24.8,63.7,8.7,68,-7.6,68.4C-23.9,68.8,-40.4,65.3,-52.7,55.4C-65,45.5,-73.1,29.2,-75.3,12.5C-77.5,-4.2,-73.8,-21.3,-65.4,-35.4C-57,-49.5,-43.9,-60.6,-29.1,-69.2C-14.3,-77.8,2.2,-83.9,17.6,-82.6C33,-81.3,38.1,-82.4,51.4,-72.5Z;
+              M44.7,-65.3C57.1,-54.5,65.7,-39.5,71.6,-23.2C77.5,-6.9,80.7,10.7,75.4,25.6C70,40.5,56.1,52.7,40.6,61.1C25.1,69.5,8.1,74.1,-9.3,73.3C-26.7,72.5,-44.5,66.2,-56.4,54.3C-68.3,42.4,-74.3,24.9,-75.5,7C-76.7,-10.9,-73.1,-29.3,-63.1,-42.4C-53.1,-55.5,-36.7,-63.3,-20.8,-67.6C-4.9,-71.9,10.5,-72.7,25.7,-71.3C40.9,-69.9,55.9,-66.2,44.7,-65.3Z"
+      transform="translate(100 100)"/>
+  </path>
+</svg>
+
+<svg class="blob-anchor blob-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#CDF5DC" stroke="#2D2545" stroke-width="2">
+    <animate attributeName="d" dur="18s" repeatCount="indefinite"
+      values="M38.6,-58.7C50.7,-49.2,61.2,-38.6,68.8,-25.3C76.4,-12,81.1,3.9,77.8,18.6C74.5,33.3,63.2,46.8,49.4,55.3C35.6,63.8,19.3,67.3,2.9,64.3C-13.5,61.3,-30.1,51.8,-43.4,40C-56.7,28.2,-66.7,14.1,-68.4,-1C-70.1,-16,-63.6,-32.1,-52.6,-43.2C-41.6,-54.3,-26.2,-60.4,-10.7,-62.8C4.8,-65.2,26.5,-68.2,38.6,-58.7Z;
+              M44.5,-66.3C56.9,-55.2,65.2,-40.2,69.1,-24.6C73,-9,72.4,7.1,67,21.6C61.6,36.1,51.4,49,38.5,58.4C25.6,67.8,10,73.7,-5.7,72.4C-21.4,71.1,-37.4,62.6,-50.5,51C-63.6,39.4,-73.8,24.7,-75.5,9.1C-77.2,-6.5,-70.4,-23,-60.1,-35.7C-49.8,-48.4,-36,-57.3,-21.4,-65C-6.8,-72.7,8.6,-79.2,21.4,-78.1C34.2,-77,32.1,-77.4,44.5,-66.3Z;
+              M38.6,-58.7C50.7,-49.2,61.2,-38.6,68.8,-25.3C76.4,-12,81.1,3.9,77.8,18.6C74.5,33.3,63.2,46.8,49.4,55.3C35.6,63.8,19.3,67.3,2.9,64.3C-13.5,61.3,-30.1,51.8,-43.4,40C-56.7,28.2,-66.7,14.1,-68.4,-1C-70.1,-16,-63.6,-32.1,-52.6,-43.2C-41.6,-54.3,-26.2,-60.4,-10.7,-62.8C4.8,-65.2,26.5,-68.2,38.6,-58.7Z"
+      transform="translate(100 100)"/>
+  </path>
+</svg>
+
+<svg class="blob-anchor blob-3" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#E5D8FF" stroke="#2D2545" stroke-width="2">
+    <animate attributeName="d" dur="16s" repeatCount="indefinite"
+      values="M48.2,-70.1C61.3,-60.7,69.7,-44.9,73.2,-28.4C76.7,-11.9,75.3,5.3,69.4,20.4C63.5,35.5,53.1,48.5,40.1,57.6C27.1,66.7,11.5,71.9,-4.3,76.6C-20.1,81.3,-36.1,85.5,-48.4,79.1C-60.7,72.7,-69.3,55.7,-74.8,38.7C-80.3,21.7,-82.7,4.7,-78.9,-10.4C-75.1,-25.5,-65.1,-38.7,-52.5,-48.7C-39.9,-58.7,-24.7,-65.5,-8.4,-65.3C7.9,-65.1,35.1,-79.5,48.2,-70.1Z;
+              M40.7,-58.6C53.6,-50.2,66.1,-39.8,72.3,-26.4C78.5,-13,78.4,3.4,72.5,17.1C66.6,30.8,54.9,41.8,42,51.3C29.1,60.8,14.6,68.8,-1.6,71.1C-17.8,73.4,-35.7,69.9,-49.2,60.2C-62.7,50.5,-71.8,34.5,-75.3,17.5C-78.8,0.5,-76.6,-17.6,-68.6,-31.7C-60.6,-45.8,-46.7,-55.9,-32.4,-63.5C-18.1,-71.1,-3.2,-76.2,9.6,-74C22.4,-71.8,27.8,-67,40.7,-58.6Z;
+              M48.2,-70.1C61.3,-60.7,69.7,-44.9,73.2,-28.4C76.7,-11.9,75.3,5.3,69.4,20.4C63.5,35.5,53.1,48.5,40.1,57.6C27.1,66.7,11.5,71.9,-4.3,76.6C-20.1,81.3,-36.1,85.5,-48.4,79.1C-60.7,72.7,-69.3,55.7,-74.8,38.7C-80.3,21.7,-82.7,4.7,-78.9,-10.4C-75.1,-25.5,-65.1,-38.7,-52.5,-48.7C-39.9,-58.7,-24.7,-65.5,-8.4,-65.3C7.9,-65.1,35.1,-79.5,48.2,-70.1Z"
+      transform="translate(100 100)"/>
+  </path>
+</svg>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav">
+    <a href="/" class="logo">
+      <span class="dot"></span>
+      tuveuxun.expert
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="/tarifs.html" class="active">Tarifs</a></li>
+      <li><a href="/parcours.html">Parcours</a></li>
+    </ul>
+    <a href="#rdv" class="nav-cta">RDV decouverte</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-tarifs">
+  <div class="container">
+    <div class="hero-eyebrow reveal">Forfaits publics · TTC ferme · Devis 48h</div>
+    <h1 class="reveal">L'IA, calibree<br><span class="holo">pour votre metier.</span></h1>
+    <p class="tagline reveal">
+      Forfaits packages pour <strong>PME, mairies, associations</strong>.
+      Pas d'abonnement piege, pas de frais cache. <strong>Vous savez ce que vous payez.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- FORFAITS -->
+<section class="forfaits">
+  <div class="container">
+    <div class="section-label reveal">3 forfaits packages</div>
+    <h2 class="section-title reveal">Choisissez selon <em>votre maturite IA</em>.</h2>
+
+    <div class="forfaits-grid reveal-stagger">
+
+      <article class="forfait-card card-mint">
+        <div class="forfait-icon">🔍</div>
+        <h3 class="forfait-name">Audit IA</h3>
+        <p class="forfait-target">TPE, PME, association curieuse mais hesitante. Pour savoir si l'IA peut reellement aider.</p>
+        <div class="forfait-price">
+          <span class="amount">1 500</span>
+          <span class="currency">€ HT</span>
+        </div>
+        <div class="forfait-duration">forfait · 3 jours</div>
+        <ul class="forfait-features">
+          <li>2h interview equipe + immersion processus</li>
+          <li>Cartographie 5 a 10 taches automatisables</li>
+          <li>ROI estime par tache (heures/mois)</li>
+          <li>Recommandations priorisees</li>
+          <li>Demo IA live sur 1 cas concret</li>
+        </ul>
+        <a href="#rdv" class="forfait-cta">Demander un devis</a>
+      </article>
+
+      <article class="forfait-card card-peach featured">
+        <div class="forfait-icon">⚡</div>
+        <h3 class="forfait-name">Agent metier</h3>
+        <p class="forfait-target">Structure avec 1 process clair a automatiser : reponses mails, traitement docs, generation rapports.</p>
+        <div class="forfait-price">
+          <span class="amount">4 500</span>
+          <span class="currency">€ HT</span>
+        </div>
+        <div class="forfait-duration">forfait · 7 jours</div>
+        <ul class="forfait-features">
+          <li>Conception et deploiement agent IA</li>
+          <li>Connexion outils existants (mail, docs, CRM)</li>
+          <li>Tests sur cas reels + ajustements</li>
+          <li>2h prise en main avec votre equipe</li>
+          <li>30 jours de support inclus</li>
+        </ul>
+        <a href="#rdv" class="forfait-cta">Reserver ce forfait</a>
+      </article>
+
+      <article class="forfait-card card-lavender">
+        <div class="forfait-icon">🛡️</div>
+        <h3 class="forfait-name">Agent souverain</h3>
+        <p class="forfait-target">Mairies, cabinets juridiques/sante, donnees sensibles. <strong>Vos donnees ne sortent pas de votre serveur.</strong></p>
+        <div class="forfait-price">
+          <span class="amount">8 500</span>
+          <span class="currency">€ HT</span>
+        </div>
+        <div class="forfait-duration">forfait · 12 jours</div>
+        <ul class="forfait-features">
+          <li>Tout du forfait Agent metier</li>
+          <li>LLM local on-premise (Llama, Mistral)</li>
+          <li>Conformite RGPD renforcee</li>
+          <li>Aucune donnee envoyee dans le cloud</li>
+          <li>60 jours de support inclus</li>
+        </ul>
+        <a href="#rdv" class="forfait-cta">Demander un devis</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SUR MESURE -->
+<section class="sur-mesure">
+  <div class="container">
+    <div class="sur-mesure-card reveal">
+      <div class="corner-deco">✦</div>
+      <div>
+        <div class="section-label" style="margin-bottom: 14px;">Besoin specifique</div>
+        <h3>Sur mesure, devis ferme.</h3>
+        <p>Multi-process chaines, refonte complete, integration profonde, formation interne, direction artistique. Cadrage commun en RDV puis devis ferme sous 48h.</p>
+      </div>
+      <div class="sur-mesure-price">
+        <div class="label">A partir de</div>
+        <div class="range">900–1 200</div>
+        <div class="unit">€ HT / jour</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="modules">
+  <div class="container">
+    <div class="section-label reveal">Modules a la carte</div>
+    <h2 class="section-title reveal">Prestations <em>complementaires</em>.</h2>
+    <div class="modules-grid reveal-stagger">
+      <div class="module-row">
+        <div class="module-info">
+          <h4>Pipeline IA generative communication</h4>
+          <p>Visuels reseaux sociaux, supports print, montages video automatises</p>
+        </div>
+        <div class="module-price">4 400 €</div>
+      </div>
+      <div class="module-row">
+        <div class="module-info">
+          <h4>Chatbot citoyen / adherent</h4>
+          <p>Mairies, associations · FAQ multilingue · base docs</p>
+        </div>
+        <div class="module-price">2 700 €</div>
+      </div>
+      <div class="module-row">
+        <div class="module-info">
+          <h4>Formation IA equipe (1 journee)</h4>
+          <p>Jusqu'a 12 personnes · programme custom · hands-on</p>
+        </div>
+        <div class="module-price">1 200 € / j</div>
+      </div>
+      <div class="module-row">
+        <div class="module-info">
+          <h4>Direction artistique IA-augmentee</h4>
+          <p>Identite visuelle, motion, video · 20 ans Ps/Ai/Pr/Ae</p>
+        </div>
+        <div class="module-price">640 € / j</div>
+      </div>
+      <div class="module-row">
+        <div class="module-info">
+          <h4>Refonte / dev plateforme web</h4>
+          <p>Next.js, React, Python, agents integres · forfait ou TJM</p>
+        </div>
+        <div class="module-price"> 700 € / j</div>
+      </div>
+      <div class="module-row">
+        <div class="module-info">
+          <h4>Conseil strategique IA (RDV ponctuel)</h4>
+          <p>2h de cadrage avec votre direction · livrable ecrit</p>
+        </div>
+        <div class="module-price">450 €</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIES -->
+<section class="garanties">
+  <div class="container">
+    <div class="section-label reveal">Vos garanties</div>
+    <h2 class="section-title reveal">Pas de mauvaise surprise.</h2>
+    <div class="garanties-grid reveal-stagger">
+      <div class="garantie">
+        <div class="garantie-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="garantie-text">Forfait ferme<br>pas d'imprevus</div>
+      </div>
+      <div class="garantie">
+        <div class="garantie-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="garantie-text">Devis sous 48h<br>apres RDV</div>
+      </div>
+      <div class="garantie">
+        <div class="garantie-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </div>
+        <div class="garantie-text">Facture pro SASU<br>RIB direct</div>
+      </div>
+      <div class="garantie">
+        <div class="garantie-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c4 0 7.5 2.5 8.5 6"/><polyline points="22 4 12 14 9 11"/></svg>
+        </div>
+        <div class="garantie-text">1 cycle retours<br>inclus sur livrable</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="rdv">
+  <div class="container">
+    <div class="final-cta-card reveal">
+      <h2>Tu veux un expert ?<br><em>Parlons-en.</em></h2>
+      <p>RDV decouverte de 30 minutes, gratuit et sans engagement. On regarde ensemble si l'IA peut reellement vous aider — et si oui, comment.</p>
+      <div class="cta-buttons">
+        <a href="mailto:tabascocity@proton.me?subject=RDV%20decouverte%20-%20tuveuxun.expert" class="btn-primary">
+          Reserver un RDV
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="tel:+33662282537" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          06 62 28 25 37
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="dot"></span>
+          tuveuxun.expert
+        </div>
+        <p class="footer-tagline">
+          Consultant IA independant. Integration d'agents pour PME, associations et collectivites. SASU Tabasco City — depuis 2023.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5>Site</h5>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/tarifs.html">Tarifs</a></li>
+          <li><a href="/parcours.html">Parcours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:tabascocity@proton.me">tabascocity@proton.me</a></li>
+          <li><a href="tel:+33662282537">06 62 28 25 37</a></li>
+          <li><a href="https://github.com/XITO2020" target="_blank" rel="noopener">github.com/XITO2020</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Mentions legales</a></li>
+          <li><a href="#">CGV</a></li>
+          <li><a href="#">RGPD</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SASU Tabasco City · SIREN en cours d'affichage</span>
+      <span>Made with code, not magic. ✨</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => observer.observe(el));
+
+// ============================================================
+// CUSTOM CURSOR — magnetic blob
+// ============================================================
+const cursor = document.querySelector('.cursor');
+let cursorX = 0, cursorY = 0, targetX = 0, targetY = 0;
+
+window.addEventListener('mousemove', (e) => {
+  targetX = e.clientX;
+  targetY = e.clientY;
+});
+
+function tick() {
+  cursorX += (targetX - cursorX) * 0.18;
+  cursorY += (targetY - cursorY) * 0.18;
+  cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(tick);
+}
+tick();
+
+// Cursor zone changes
+document.querySelectorAll('.forfait-card, .module-row, .garantie, .sur-mesure-card, .final-cta-card').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover-card'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover-card'));
+});
+
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover-link'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover-link'));
+});
+
+</script>
+
+</body>
+</html>

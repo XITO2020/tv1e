@@ -1,0 +1,27 @@
+# api.tuveuxun.expert — backend FastAPI (chatbot Tv1E + Stripe), route par le
+# Traefik du KVM 2. Moteur : Ollama local (Qwen2.5 3B), 100% souverain, gratuit.
+# KB-first : le LLM n'est appele que pour les questions hors-FAQ.
+services:
+  api:
+    build: .
+    container_name: tuveuxun-api
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      - OLLAMA_URL=http://127.0.0.1:11434
+      - BOT_MODEL=qwen2.5:3b
+      - BOT_NUM_GPU=0
+      - BOT_TEMPERATURE=0.4
+      - BOT_MAX_TOKENS=350
+      - BOT_WARMUP=0
+      - BOT_DB_PATH=/app/data/data.db
+      - EVOLUTION_PRODUCT=mairiebot
+      - SITE_URL=https://tuveuxun.expert
+    volumes:
+      - ./data:/app/data
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.tuveuxun-api.rule=Host(`api.tuveuxun.expert`)
+      - traefik.http.routers.tuveuxun-api.entrypoints=websecure
+      - traefik.http.routers.tuveuxun-api.tls.certresolver=letsencrypt
+      - traefik.http.services.tuveuxun-api.loadbalancer.server.port=8001

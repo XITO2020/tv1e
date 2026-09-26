@@ -1,0 +1,19 @@
+# tuveuxun.expert — frontend statique servi par nginx, route par le Traefik
+# deja present sur le KVM 2 (meme schema que le conteneur openclaw-eknq).
+# Traefik lit ces labels tout seul et fabrique le certificat Let's Encrypt.
+# Isole : ne touche ni Dueria, ni le mail, ni Traefik lui-meme.
+services:
+  web:
+    image: nginx:alpine
+    container_name: tuveuxun-web
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./out:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.tuveuxun.rule=Host(`tuveuxun.expert`) || Host(`www.tuveuxun.expert`)
+      - traefik.http.routers.tuveuxun.entrypoints=websecure
+      - traefik.http.routers.tuveuxun.tls.certresolver=letsencrypt
+      - traefik.http.services.tuveuxun.loadbalancer.server.port=8085

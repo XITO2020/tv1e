@@ -1,0 +1,555 @@
+{
+  "_lisez_moi": "Base de connaissances de l'agent Tv1E. Chaque entree = une reponse PRETE. Le backend cherche d'abord ici par mots-cles : si une entree correspond nettement, la reponse part instantanement SANS appeler le modele (0 s au lieu de 30-60 s sur le VPS). Sinon, les 3 meilleures entrees sont injectees dans le prompt pour que le petit Qwen raisonne dessus au lieu d'inventer. Naim enrichit ce fichier au fil des mois : plus il est fourni, plus le bot est rapide ET juste. Format d'une entree : id unique, theme, q (la question de reference), keywords (ce que le visiteur tape vraiment, sans accent, en minuscules), a (la reponse servie telle quelle).",
+  "entries": [
+    {
+      "id": "tarifs-forfaits",
+      "theme": "Tarifs",
+      "q": "Combien coûte une première mission ?",
+      "keywords": [
+        "prix",
+        "tarif",
+        "combien",
+        "cout",
+        "coute",
+        "forfait",
+        "package",
+        "grille",
+        "ca coute combien",
+        "devis",
+        "budget",
+        "honoraires",
+        "que proposez vous",
+        "vos offres",
+        "vos services"
+      ],
+      "a": "Trois forfaits fermes, en HT : Diagnostic IA 690 € (1 jour), Agent métier 1 900 € (3 jours, le plus demandé), Agent souverain sur mesure 2 700 € (5 jours, agent et LLM installés chez vous). Jamais d'abonnement : une mise à jour est proposée tous les 4 mois à 120 €, à prendre ou à laisser. Le prix annoncé est le prix facturé."
+    },
+    {
+      "id": "tarifs-abonnement",
+      "theme": "Tarifs",
+      "q": "Y a-t-il un abonnement ?",
+      "keywords": [
+        "abonnement",
+        "mensuel",
+        "recurrent",
+        "engagement",
+        "sla",
+        "souscription",
+        "par mois",
+        "prelevement"
+      ],
+      "a": "Jamais. Ni abonnement, ni SLA, ni support mensuel obligatoire. Vous payez une prestation, elle vous appartient. Tous les 4 mois, une mise à jour de votre agent vous est proposée à 120 € : vous la prenez ou vous la refusez, et refuser ne dégrade rien de ce qui tourne déjà."
+    },
+    {
+      "id": "tarifs-audit",
+      "theme": "Tarifs",
+      "q": "Que couvre exactement le diagnostic à 690 € ?",
+      "keywords": [
+        "audit",
+        "diagnostic",
+        "690",
+        "premier pas",
+        "que couvre"
+      ],
+      "a": "Une journée : cartographie de vos tâches répétitives, ce qui est automatisable aujourd'hui, ce qui ne l'est pas et pourquoi, une démonstration d'un agent souverain en direct sur vos propres données, puis le chiffrage de ce qui vaut le coup. 690 € HT, déductibles d'un forfait signé sous 30 jours. Vous repartez avec le document même si vous n'allez pas plus loin."
+    },
+    {
+      "id": "tarifs-modules",
+      "theme": "Tarifs",
+      "q": "Quels modules à la carte proposez-vous ?",
+      "keywords": [
+        "module",
+        "a la carte",
+        "prestation",
+        "catalogue",
+        "options",
+        "autres services"
+      ],
+      "a": "Skill pack métier additionnel 290 € · Mise à jour d'agent tous les 4 mois 120 € · Pipeline IA générative pour la communication 2 400 € · Chatbot citoyen ou adhérent 1 400 € · Formation équipe 1 200 € / jour · Direction artistique IA-augmentée 900 € / jour · Refonte ou développement de plateforme web 1 000 € / jour · Conseil stratégique en rendez-vous de 2 h 450 €."
+    },
+    {
+      "id": "tarifs-sur-mesure",
+      "theme": "Tarifs",
+      "q": "Mon besoin ne rentre dans aucun forfait, que faire ?",
+      "keywords": [
+        "sur mesure",
+        "specifique",
+        "particulier",
+        "tjm",
+        "jour",
+        "devis",
+        "cas particulier"
+      ],
+      "a": "Sur mesure, avec un TJM de 900 à 1 200 € HT selon la complexité. Le devis est ferme et arrive sous 48 h après le rendez-vous de cadrage."
+    },
+    {
+      "id": "tarifs-petit-budget",
+      "theme": "Tarifs",
+      "q": "J'ai un petit budget, c'est jouable ?",
+      "keywords": [
+        "petit budget",
+        "pas cher",
+        "association",
+        "asso",
+        "moyens",
+        "limite",
+        "peu de budget",
+        "3000",
+        "2000"
+      ],
+      "a": "Oui. Le diagnostic à 690 € ou le rendez-vous de conseil à 450 € permettent de commencer sans engager la suite, et l'agent métier à 1 900 € tient dans un budget de 3 000 €. On ne pousse pas un forfait qui ne rentre pas dans votre budget."
+    },
+    {
+      "id": "tarifs-paiement",
+      "theme": "Tarifs",
+      "q": "Comment se passe le paiement ?",
+      "keywords": [
+        "paiement",
+        "payer",
+        "acompte",
+        "facture",
+        "virement",
+        "reglement",
+        "echeance",
+        "plusieurs fois",
+        "echelonner",
+        "echelonne",
+        "mensualite",
+        "3 fois"
+      ],
+      "a": "Acompte de 30 % au démarrage, solde à la livraison. Virement bancaire, facture professionnelle. Pas de prélèvement récurrent."
+    },
+    {
+      "id": "delais-livraison",
+      "theme": "Délais",
+      "q": "Quels sont les délais de livraison ?",
+      "keywords": [
+        "delai",
+        "duree",
+        "combien de temps",
+        "quand",
+        "rapidite",
+        "livraison",
+        "jours",
+        "rapide",
+        "vite",
+        "sous combien"
+      ],
+      "a": "Diagnostic IA 1 jour · Agent métier 3 jours · Agent souverain sur mesure 5 jours. Rendez-vous de découverte sous 48 h, devis ferme sous 48 h après le cadrage."
+    },
+    {
+      "id": "process-demarrage",
+      "theme": "Délais",
+      "q": "Comment démarre-t-on concrètement ?",
+      "keywords": [
+        "demarrer",
+        "commencer",
+        "process",
+        "etapes",
+        "deroulement",
+        "comment ca marche",
+        "demarche"
+      ],
+      "a": "1. Rendez-vous de découverte de 30 minutes, gratuit, en visio ou par téléphone. 2. Cadrage : on fixe ensemble le périmètre exact et les livrables. 3. Devis ferme sous 48 h. 4. Démarrage à réception de l'acompte de 30 %. 5. Livraison et 2 h de prise en main avec votre équipe. 6. Support 30 ou 60 jours selon le forfait."
+    },
+    {
+      "id": "process-rdv",
+      "theme": "Délais",
+      "q": "Le rendez-vous de découverte est-il payant ?",
+      "keywords": [
+        "rendez vous",
+        "rdv",
+        "decouverte",
+        "gratuit",
+        "premier contact",
+        "appel",
+        "visio",
+        "30 minutes"
+      ],
+      "a": "Non. 30 minutes, gratuit, sans engagement. C'est là que l'on détermine si le besoin justifie une prestation — et il arrive que la réponse soit non."
+    },
+    {
+      "id": "process-sur-site",
+      "theme": "Délais",
+      "q": "Intervenez-vous sur site ?",
+      "keywords": [
+        "sur site",
+        "deplacement",
+        "distance",
+        "region",
+        "ou etes vous",
+        "presentiel",
+        "visio",
+        "zone"
+      ],
+      "a": "Île-de-France sur site, partout ailleurs à distance. L'installation d'un agent souverain se fait sur votre serveur, que l'on soit dans vos locaux ou connecté."
+    },
+    {
+      "id": "garanties-retours",
+      "theme": "Délais",
+      "q": "Que se passe-t-il si le résultat ne me convient pas ?",
+      "keywords": [
+        "pas satisfait",
+        "garantie",
+        "retour",
+        "insatisfait",
+        "rate",
+        "si ca marche pas",
+        "remboursement"
+      ],
+      "a": "Un cycle de retours est inclus sur chaque livrable, et le forfait est ferme : aucun imprévu ne vous est refacturé. Le périmètre fixé au cadrage est celui qui est livré."
+    },
+    {
+      "id": "rgpd-cloud",
+      "theme": "Souveraineté",
+      "q": "Mes données partent-elles dans le cloud ?",
+      "keywords": [
+        "rgpd",
+        "donnees",
+        "cloud",
+        "confidentialite",
+        "securite",
+        "prive",
+        "fuite",
+        "conformite",
+        "sensibles",
+        "heberge",
+        "stocke",
+        "ou vont mes donnees"
+      ],
+      "a": "Avec l'agent souverain, non : le modèle tourne sur votre serveur, les données ne sortent jamais de chez vous. C'est la configuration prévue pour les mairies, les cabinets juridiques et le secteur médical."
+    },
+    {
+      "id": "rgpd-souverain",
+      "theme": "Souveraineté",
+      "q": "Qu'est-ce que l'agent souverain exactement ?",
+      "keywords": [
+        "souverain",
+        "on premise",
+        "local",
+        "chez nous",
+        "notre serveur",
+        "llm local",
+        "mairie",
+        "mairies",
+        "commune",
+        "collectivite",
+        "ville",
+        "municipal",
+        "2700",
+        "2 700",
+        "hermes",
+        "auto-evolutif"
+      ],
+      "a": "2 700 € HT, 5 jours, 60 jours de support. On installe la voie souveraine adaptée à votre machine — OpenClaw, Hermes ou un LLM local pur — avec Ollama et un modèle ouvert (Qwen3 ou Mistral) sur votre serveur, vos documents, vos garde-fous et deux skill packs métier. L'agent garde sa mémoire chez vous, aucune dépendance à un service externe : rien ne sort de votre serveur."
+    },
+    {
+      "id": "rgpd-materiel",
+      "theme": "Souveraineté",
+      "q": "Quel matériel faut-il pour héberger un modèle chez nous ?",
+      "keywords": [
+        "materiel",
+        "hardware",
+        "ram",
+        "vram",
+        "carte graphique",
+        "gpu",
+        "serveur",
+        "machine",
+        "config",
+        "puissance"
+      ],
+      "a": "8 Go de RAM sans carte graphique suffisent pour une démonstration (Phi-3 Mini). 16 Go avec 8 Go de VRAM font tourner Qwen 2.5 7B, le format mairie ou cabinet. 32 Go avec une RTX 3080 ou 4080 tiennent Llama 3 8B ou Mixtral en production. 64 Go avec une RTX 4090 permettent du multi-utilisateur."
+    },
+    {
+      "id": "rgpd-audit-hardware",
+      "theme": "Souveraineté",
+      "q": "Puis-je savoir avant d'acheter ce que ma machine peut faire tourner ?",
+      "keywords": [
+        "audit materiel",
+        "audit hardware",
+        "ma machine",
+        "mon parc",
+        "compatible",
+        "verifier"
+      ],
+      "a": "Oui, l'audit matériel est gratuit : 15 minutes pour évaluer ce que votre parc existant supporte réellement. C'est souvent là que l'on découvre qu'un serveur déjà présent suffit."
+    },
+    {
+      "id": "rgpd-installation",
+      "theme": "Souveraineté",
+      "q": "Combien de temps prend l'installation ?",
+      "keywords": [
+        "installation",
+        "installer",
+        "deployer",
+        "mise en place",
+        "linux",
+        "windows",
+        "macos"
+      ],
+      "a": "Une journée sur place ou à distance, quel que soit le système : Linux, macOS ou Windows, avec des installeurs natifs. L'installation se fait avec vous, pas à votre place : vous savez ensuite la refaire."
+    },
+    {
+      "id": "equipe-qui",
+      "theme": "Équipe",
+      "q": "Qui travaille sur mon projet ?",
+      "keywords": [
+        "qui",
+        "equipe",
+        "Naïm",
+        "intervenant",
+        "consultant",
+        "personne",
+        "avec qui",
+        "bosser",
+        "travaille",
+        "intervient",
+        "realise"
+      ],
+      "a": "Naïm est l'intervenant principal : architecte agentique et développeur full-stack senior. Selon le besoin, il s'appuie sur un collectif de 7 entités — organisation et management, plateformes et financements, applications SaaS, cybersécurité, écriture — chacune avec sa structure dédiée."
+    },
+    {
+      "id": "equipe-agence",
+      "theme": "Équipe",
+      "q": "Êtes-vous une agence ?",
+      "keywords": [
+        "agence",
+        "societe",
+        "entreprise",
+        "freelance",
+        "independant",
+        "structure",
+        "combien vous etes"
+      ],
+      "a": "Non. Un collectif de spécialistes indépendants qui travaillent ensemble depuis des années. Vous avez un interlocuteur unique, pas un commercial puis un chef de projet puis un prestataire."
+    },
+    {
+      "id": "equipe-cible",
+      "theme": "Équipe",
+      "q": "Travaillez-vous avec des startups en levée de fonds ?",
+      "keywords": [
+        "startup",
+        "levee",
+        "scale up",
+        "series a",
+        "pour qui",
+        "clients types",
+        "cible",
+        "mairie",
+        "commune",
+        "collectivite",
+        "pme",
+        "tpe",
+        "association",
+        "cabinet"
+      ],
+      "a": "Ce n'est pas la cible. Le travail est calibré pour les PME, les TPE, les mairies, les collectivités et les associations — des structures où l'IA doit produire vite sans équipe technique interne."
+    },
+    {
+      "id": "equipe-competences",
+      "theme": "Équipe",
+      "q": "Faut-il des compétences techniques dans notre équipe ?",
+      "keywords": [
+        "competences",
+        "technique",
+        "informaticien",
+        "pas technique",
+        "novice",
+        "debutant",
+        "sans dev",
+        "former"
+      ],
+      "a": "Non. C'est même le point de départ : les livrables sont conçus pour des équipes non techniques, avec 2 h de prise en main incluses et une documentation écrite en français courant, sans jargon."
+    },
+    {
+      "id": "formation-offre",
+      "theme": "Formation",
+      "q": "Formez-vous les équipes ?",
+      "keywords": [
+        "formation",
+        "former",
+        "bootcamp",
+        "atelier",
+        "cours",
+        "apprendre",
+        "coaching",
+        "formez",
+        "formons",
+        "forme mon equipe",
+        "session"
+      ],
+      "a": "Bootcamp IA d'une journée jusqu'à 12 personnes, programme construit sur vos cas réels : 1 200 € / jour. Atelier dirigeants d'une demi-journée pour le cadrage stratégique : 900 €. Coaching mensuel d'un jour par mois pour un suivi long terme : 1 200 € / jour."
+    },
+    {
+      "id": "formation-pedigree",
+      "theme": "Formation",
+      "q": "Combien de personnes avez-vous formées ?",
+      "keywords": [
+        "combien de personnes",
+        "pedigree",
+        "reference",
+        "experience",
+        "deja forme",
+        "apprenants"
+      ],
+      "a": "160 apprenants en deux ans de bootcamps."
+    },
+    {
+      "id": "formation-incluse",
+      "theme": "Formation",
+      "q": "La formation est-elle incluse dans les forfaits ?",
+      "keywords": [
+        "formation incluse",
+        "prise en main",
+        "accompagnement",
+        "inclus",
+        "apres livraison",
+        "formation comprise"
+      ],
+      "a": "Deux heures de prise en main sont incluses à chaque livraison. La formation approfondie de l'équipe est un module à part, parce qu'elle demande un programme construit sur vos cas et pas une démonstration générique."
+    },
+    {
+      "id": "apres-propriete",
+      "theme": "Après la livraison",
+      "q": "Que devient l'agent une fois livré ?",
+      "keywords": [
+        "propriete",
+        "appartient",
+        "licence",
+        "qui possede",
+        "apres",
+        "garder"
+      ],
+      "a": "Il vous appartient et il tourne chez vous. Pas de licence à renouveler, pas de compte à garder ouvert, pas de service distant qui pourrait être coupé."
+    },
+    {
+      "id": "apres-maj",
+      "theme": "Après la livraison",
+      "q": "Comment se passent les mises à jour ?",
+      "keywords": [
+        "mise a jour",
+        "maj",
+        "update",
+        "evolution",
+        "obsolete",
+        "120",
+        "4 mois",
+        "vieillir"
+      ],
+      "a": "Tous les 4 mois, votre agent vérifie s'il existe une mise à jour et vous la propose — jamais il ne l'installe seul. Elle coûte 120 €, à l'acte. Si vous refusez, absolument rien ne se dégrade : la version installée continue de fonctionner comme au premier jour."
+    },
+    {
+      "id": "apres-support",
+      "theme": "Après la livraison",
+      "q": "Y a-t-il un support après la livraison ?",
+      "keywords": [
+        "support",
+        "maintenance",
+        "assistance",
+        "depannage",
+        "aide apres",
+        "probleme"
+      ],
+      "a": "30 jours inclus sur l'agent métier, 60 jours sur l'agent souverain. Au-delà, l'intervention se paie à l'acte, et une mise à jour de l'agent vous est proposée tous les 4 mois à 120 €. Jamais de forfait mensuel."
+    },
+    {
+      "id": "apres-perennite",
+      "theme": "Après la livraison",
+      "q": "Que se passe-t-il si vous arrêtez l'activité ?",
+      "keywords": [
+        "si vous arretez",
+        "disparaissez",
+        "perennite",
+        "dependance",
+        "et si",
+        "faillite",
+        "avenir"
+      ],
+      "a": "Rien ne s'arrête chez vous. C'est précisément l'intérêt du local : le code, les modèles et les données sont sur vos machines, sans appel à un serveur extérieur. Un prestataire qui disparaît ne doit pas emporter votre outil de travail."
+    },
+    {
+      "id": "tech-stack",
+      "theme": "Technique",
+      "q": "Quelle stack utilisez-vous ?",
+      "keywords": [
+        "stack",
+        "technologie",
+        "techno",
+        "outils",
+        "langage",
+        "framework",
+        "avec quoi"
+      ],
+      "a": "Côté IA : Ollama, Llama 3, Qwen 2.5, Mistral, Mixtral, l'API Claude quand le cloud est acceptable, et le protocole MCP. Côté développement : Next.js, React, Three.js, Python, FastAPI, Node, PostgreSQL, Docker, Linux."
+    },
+    {
+      "id": "tech-openclaw",
+      "theme": "Technique",
+      "q": "Quelles sont les voies souveraines proposées ?",
+      "keywords": [
+        "hermes",
+        "openclaw",
+        "open claw",
+        "stack souveraine",
+        "ollama",
+        "nous research"
+      ],
+      "a": "Selon votre machine, votre budget et votre envie de vous impliquer, on installe la voie qui vous convient : OpenClaw, une plateforme d'agents auto-hébergée accessible qui tourne même sur une machine modeste ; Hermes, un runtime open source (MIT, Nous Research) auto-évolutif pour les machines plus puissantes ; ou un LLM local pur (Ollama + modèle ouvert) pour un chatbot souverain simple. Dans tous les cas : Ollama, un modèle ouvert sur votre serveur, aucun appel sortant, la mémoire chez vous. On peut aussi rester en cloud (Claude, DeepSeek...) quand c'est acceptable et que vous voulez aller vite."
+    },
+    {
+      "id": "tech-opensource",
+      "theme": "Technique",
+      "q": "Publiez-vous du code ?",
+      "keywords": [
+        "open source",
+        "github",
+        "code source",
+        "publier",
+        "libre",
+        "mit",
+        "skills"
+      ],
+      "a": "Oui, à partir de 22 outils Claude Code développés en interne, publiés gratuitement sous licence MIT sur GitHub (suppléments sur devis). Le modèle économique porte sur l'expertise humaine — conseil, formation, intégration — pas sur la vente de fichiers."
+    },
+    {
+      "id": "tech-reprise",
+      "theme": "Technique",
+      "q": "Pouvez-vous reprendre un projet IA déjà commencé ?",
+      "keywords": [
+        "reprendre",
+        "existant",
+        "deja commence",
+        "projet en cours",
+        "rattraper",
+        "recuperer",
+        "refaire",
+        "e-commerce",
+        "site web",
+        "notre site",
+        "application"
+      ],
+      "a": "Oui, et c'est fréquent. L'audit sert alors à établir ce qui est récupérable, ce qui doit être refait et ce qui doit être abandonné. Cette dernière catégorie n'est jamais vide."
+    },
+    {
+      "id": "meta-lenteur",
+      "theme": "Ce chatbot",
+      "q": "Pourquoi le chatbot est-il lent ?",
+      "keywords": [
+        "lent",
+        "lenteur",
+        "rame",
+        "attendre",
+        "long",
+        "vitesse",
+        "pourquoi si long",
+        "bug",
+        "lente",
+        "attente",
+        "patienter",
+        "ca charge"
+      ],
+      "a": "Parce qu'il tourne sur un serveur économique, avec un modèle ouvert installé en local et aucune donnée envoyée au cloud. Les questions courantes sont servies instantanément depuis une base écrite ; seules les questions inattendues passent par le modèle, et celles-là peuvent demander une trentaine de secondes. C'est un choix assumé : dimensionner la machine au trafic réel plutôt que faire payer un serveur surdimensionné."
+    }
+  ]
+}

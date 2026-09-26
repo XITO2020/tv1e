@@ -1,0 +1,38 @@
+node_modules
+.next
+out
+dist
+.DS_Store
+*.log
+# SQLite leads/commandes (PII) — jamais committe
+*.db
+*.db-wal
+*.db-shm
+# Durci 2026-07-09 : couvre .env, backend/.env, .env.production — pas seulement *.local
+.env
+.env.*
+**/.env
+!.env.example
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+backend/evolution_state.json
+backend/evolution/*/*.tar.gz
+backend/evolution/*/manifest.signed.json
+out/
+_deploy/
+# Python (backend FastAPI)
+venv/
+.venv/
+__pycache__/
+*.pyc
+# Export Next statique (genere, lourd)
+.next-export/
+# Backups locaux d'originaux (lourds, pas de la source — restent sur disque)
+_backup*/
+# Medias lourds (regle Naim : > 5 Mo hors git ; deployes separement sur le serveur)
+*.mp4
+*.webm
+*.mov
+*.mkv

@@ -1,0 +1,22 @@
+[
+  {
+    "type": "portrait",
+    "slug": "Naïm",
+    "result": {
+      "job_id": "feaf1235-3085-403c-8f63-82050d66b57f",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "1f460f85-2957-46dc-9c3b-e424d77a456d",
+      "images": [
+        {
+          "filename": "qishim_00006_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00006_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00006_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  }
+]

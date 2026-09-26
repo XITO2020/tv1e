@@ -1,0 +1,362 @@
+[
+  {
+    "type": "portrait",
+    "slug": "Naïm",
+    "result": {
+      "job_id": "09fd571a-bb14-442e-a9f5-61bb6bdc9e7c",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "bf06fed8-7758-43d5-aa7a-cc0dbca673ef",
+      "images": [
+        {
+          "filename": "qishim_00002_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00002_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00002_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "portrait",
+    "slug": "eddy",
+    "result": {
+      "job_id": "334a0106-7820-4c6f-8fc4-c6b0cc0f597f",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "3d56854f-d1a1-4042-b52a-5f6c88fee164",
+      "images": [
+        {
+          "filename": "qishim_00003_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00003_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00003_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "portrait",
+    "slug": "manon",
+    "result": {
+      "job_id": "9f695c79-4892-49fc-93c0-cb5efc010e8b",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "fef46440-109c-4646-90c6-d2ba6a822c93",
+      "images": [
+        {
+          "filename": "qishim_00004_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00004_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00004_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "portrait",
+    "slug": "alex",
+    "result": {
+      "job_id": "88c1c84b-a197-4063-b336-71b151199c8f",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "d10f7dc0-dccb-40f8-a3f9-c83eb5daceb8",
+      "images": [
+        {
+          "filename": "qishim_00005_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00005_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00005_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "portrait",
+    "slug": "june",
+    "result": {
+      "job_id": "fddb9740-06b9-4460-ae65-0f74584ca167",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "31d7b966-99d6-42b5-8227-2d88d07a42d9",
+      "images": [
+        {
+          "filename": "qishim_00007_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00007_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00007_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "portrait",
+    "slug": "orland-opal",
+    "result": {
+      "job_id": "f9a1e45e-e53e-4f36-a4cc-b379a3cc033a",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "94bd2ad8-5bae-403d-8c71-fad5106fa0fc",
+      "images": [
+        {
+          "filename": "qishim_00009_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00009_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00009_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "findor",
+    "result": {
+      "job_id": "f2a2d83c-6f27-4695-81a4-443a97153804",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "910a5411-83ce-4088-bc77-92192ee98ca7",
+      "images": [
+        {
+          "filename": "qishim_00011_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00011_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00011_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "scrappowin",
+    "result": {
+      "job_id": "59ffac3a-c65f-4f3b-bc3d-19bcd867e2f4",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "1c65f7e9-f89d-4bc2-b735-57b8e2d3c62e",
+      "images": [
+        {
+          "filename": "qishim_00013_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00013_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00013_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "studio-antiguo",
+    "result": {
+      "job_id": "137016d9-ef7e-43d5-b5af-e13fbb6dabee",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "3520b18c-5b5a-44c8-bfdd-c99d291051f5",
+      "images": [
+        {
+          "filename": "qishim_00015_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00015_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00015_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "openclaw",
+    "result": {
+      "job_id": "e8ceaca4-d453-4bb9-a1d0-d5842527f774",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "62895cbc-4919-4fa5-b035-500f01b126bc",
+      "images": [
+        {
+          "filename": "qishim_00017_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00017_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00017_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "agentcron",
+    "result": {
+      "job_id": "2ae92f9e-b87d-4cc4-b36d-011eadea04ef",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "7240d215-c8a3-4e6f-8773-2bdb35e245ae",
+      "images": [
+        {
+          "filename": "qishim_00019_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00019_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00019_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "mairiebot",
+    "result": {
+      "job_id": "a5b36530-6242-4f3e-9a7c-fa7bdd9a7406",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "ef0c4e38-ccff-4640-9549-3de0648436f1",
+      "images": [
+        {
+          "filename": "qishim_00021_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00021_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00021_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "reportium",
+    "result": {
+      "job_id": "b3b3fcc4-6149-465c-811f-bd91bd0dd817",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "7ff6db16-e829-4a3b-bdc2-43ca5c0ba435",
+      "images": [
+        {
+          "filename": "qishim_00023_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00023_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00023_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "docusweep",
+    "result": {
+      "job_id": "1dfe4012-0f3e-4eea-b303-ed2eb7bc534c",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "0176dfd7-04d3-4aa2-9cd6-cc7a923d4a58",
+      "images": [
+        {
+          "filename": "qishim_00025_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00025_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00025_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "cortexlab",
+    "result": {
+      "job_id": "74381c04-8a95-4584-b980-a3deef46348c",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "52515493-ba73-4264-89c6-0458ede7415e",
+      "images": [
+        {
+          "filename": "qishim_00027_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00027_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00027_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "hyperframes-studio",
+    "result": {
+      "job_id": "4c2ef221-c583-4965-8f1b-deb3ba06bca8",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "9b396a77-5304-46f2-b3e5-31171b7bf081",
+      "images": [
+        {
+          "filename": "qishim_00029_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00029_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00029_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "tabasco-city",
+    "result": {
+      "job_id": "6c440353-eecf-4abe-942b-65f63b6b8831",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "682b974c-d713-4492-9890-051fe400efee",
+      "images": [
+        {
+          "filename": "qishim_00031_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00031_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00031_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  },
+  {
+    "type": "pixelart",
+    "slug": "memorial",
+    "result": {
+      "job_id": "a0028434-4654-4215-9a36-aa50e7dd75d6",
+      "faceid": false,
+      "status": "completed",
+      "prompt_id": "21e28df2-b929-4f57-b925-82d0c70eaae0",
+      "images": [
+        {
+          "filename": "qishim_00033_.png",
+          "url": "http://127.0.0.1:8188/view?filename=qishim_00033_.png&subfolder=&type=output",
+          "subfolder": "",
+          "rel_path": "images/qishim_00033_.png"
+        }
+      ],
+      "videos": [],
+      "saved_to": "C:\\Users\\naimd\\Documents\\QISHIM-CORTEX\\softwares\\studio-ai\\assets\\generated"
+    }
+  }
+]

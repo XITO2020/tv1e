@@ -1,0 +1,44 @@
+# tuveuxun.expert
+
+> Installateur d'agents IA et de sites/plateformes pour PME, entreprises, mairies, collectivités et associations. Intégration d'agents métier, automatisation, LLM souverain on-premise conforme RGPD, chatbots et formation. Forfaits fermes, sans abonnement.
+
+tuveuxun.expert est le service d'un consultant IA indépendant (SASU française). Il conçoit et installe des agents IA opérationnels et des sites web pour des structures non-techniques, en s'appuyant au choix sur des modèles cloud (Claude, GPT, Gemini, DeepSeek) ou souverains/locaux (OpenClaw, Hermes, Ollama + Qwen3, Mistral) déployés sur le serveur du client, sans que les données ne quittent son infrastructure.
+
+## Ce que fait tuveuxun.expert
+
+- Intégration d'agents IA métier : traitement de documents, réponses e-mail, génération de rapports, prospection, branchés sur les outils existants du client (ROI mesurable en 30 jours).
+- Agent souverain on-premise : LLM local + agent auto-hébergé, conforme RGPD, pour mairies, cabinets juridiques, santé et données sensibles.
+- Développement de sites et plateformes web (Next.js, React, Three.js, Python/FastAPI).
+- Chatbots citoyens / adhérents multilingues.
+- Formation des équipes à l'IA et aux agents.
+
+## Pour qui
+
+PME, TPE, entreprises, mairies, collectivités et associations francophones qui veulent que l'IA produise vite, sans équipe technique interne.
+
+## Forfaits (HT, sans abonnement)
+
+- Diagnostic IA — 690 € — 1 jour (cartographie + démo d'un agent souverain sur vos données).
+- Agent métier — 1 900 € — 3 jours, 30 jours de support.
+- Agent souverain sur mesure — 2 700 € — 5 jours, 60 jours de support, LLM local on-premise.
+- Modules à la carte : skill pack métier 290 €, pipeline IA générative 2 400 €, chatbot 1 400 €, formation 1 200 €/jour, conseil 450 €.
+- Mise à jour d'agent tous les 4 mois : 120 €, facultative.
+
+## Principes
+
+- Prix annoncé = prix facturé. Devis ferme sous 48 h. Jamais d'abonnement imposé.
+- Souveraineté et RGPD : option 100 % local, aucune donnée dans le cloud.
+- Skills Claude Code publiés en open source (licence MIT).
+
+## Pages
+
+- Accueil : https://tuveuxun.expert/
+- Tarifs : https://tuveuxun.expert/tarifs
+- Marketplace d'agents : https://tuveuxun.expert/marketplace
+- Catalogue d'agents : https://tuveuxun.expert/agents
+- Infrastructure souveraine : https://tuveuxun.expert/structure-souveraine
+- À propos / équipe : https://tuveuxun.expert/a-propos
+
+## Contact
+
+E-mail : tabascocity@proton.me

@@ -1,0 +1,40 @@
+{
+  "_historique": "Remplace SPEC-CHAPITRE-06-CIRCUITS.json. Le chantier 'circuits imprimes' (3 versions successives) a ete REJETE par Naim le 02/09/2026 : 'c est vraiment tres tres moche, mieux vaut tout degager du 6 et 7 et recommencer'. Le composant CircuitGrowth.tsx est supprime et demonte de app/page.tsx. Ce fichier decrit la direction qui le remplace.",
+
+  "chapitre_06": {
+    "principe": "PLUS AUCUN FONDU. Chaque element du Hero 1 sort de l'ecran par un mouvement qui lui est propre, choregraphie et decale dans le temps.",
+    "consigne_naim_verbatim": "les anneaux s'alignent a l'horizontale et s'envolent vers le haut comme un faisceau d'ufo alien ; la forme tourbillonnante au milieu part en premier en retrecissant vers le haut a travers ce corridor de lumiere vertical qui glow compose des anneaux ; les particules eclatent comme un feu d'artifice puis meurent en paillette ; les boutons sur les cotes s'ecartent en translate x vers les exterieurs de l'ecran avec un rythme en cascade.",
+    "fenetre_scroll": "p 0.92 -> 1.00 de la section AgentWorld (312 px). Le hold du Hero 1 (360 degres) reste intact avant.",
+
+    "partition_3d": {
+      "noyau_torus_knot": "Part LE PREMIER (exit 0 -> 0.44). Monte en acceleration (ease-in) sur 40 unites, retrecit a 6% de sa taille, sa rotation s'emballe. Disparait avant les anneaux.",
+      "anneaux": "Alignement a l'horizontale (exit 0.10 -> 0.50) : les trois inclinaisons de repos sont interpolees vers rotation.x = PI/2. Puis envol EN CASCADE (exit 0.32 + i*0.08) a des hauteurs croissantes (26, 36, 46) : les trois cerceaux empiles dessinent le corridor vertical.",
+      "faisceau": "Cylindre additif ouvert, revele avec l'alignement (exit 0.18 -> 0.62), qui etire son echelle verticale. C'est la colonne de lumiere que le noyau traverse.",
+      "particules": "Explosion radiale par mise a l'echelle du nuage (x8.5, ease-out, exit 0.06 -> 0.50), rotation qui s'emballe, puis mort (exit 0.42 -> 0.94) avec scintillement rapide (sin 26 Hz) et taille decroissante = paillettes qui s'eteignent.",
+      "halo": "S'eteint tot (exit 0 -> 0.32) pour laisser la place au faisceau."
+    },
+
+    "partition_dom": {
+      "titre": "S'eleve de 190 px et retrecit legerement (exit 0.08 -> 0.62).",
+      "stats": "Glisse a gauche de 160 px (exit 0.04 -> 0.50).",
+      "paragraphe": "Glisse a gauche de 230 px (exit 0.14 -> 0.66).",
+      "boutons": "S'ecartent vers l'exterieur GAUCHE (75% de la largeur d'ecran), en cascade : depart decale de 0.15 par bouton.",
+      "panneau_hud_droit": "Part vers l'exterieur DROIT (70% de la largeur), en cascade ligne par ligne : bloc disponibilite puis les 4 options, decalage 0.10.",
+      "implementation": "Marquage par data-exit / data-exit-i. La liste est resolue UNE fois puis mise en cache (pas de querySelectorAll par frame). Transforms appliquees en translate3d + scale, sans setState."
+    }
+  },
+
+  "chapitre_07": {
+    "statut": "EN ATTENTE des rendus video de Naim (studio-ai).",
+    "consigne_naim_verbatim": "une video qui agit au scroll mais visible que sur les cotes du container ; comme si le container etait en z-index superieur et absolute au dessus de la video qui defile de la section Hero2 a celle du carousel d agent.",
+    "principe_retenu": "Une video de fond, scrubee au scroll, court de la fin du Hero 2 jusqu'a la section carousel. Le conteneur de contenu passe AU-DESSUS (z-index superieur, fond opaque) : la video n'est donc visible que dans les gouttieres laterales, de part et d'autre du contenu centre.",
+    "a_fournir_par_naim": "Les mp4 generes dans studio-ai a partir des deux images de reference (PCB vert bouteille + pistes dorees / arbre a racines de circuit). Encodage conseille pour le scrub : ffmpeg -i in.mp4 -c:v libx264 -g 5 -pix_fmt yuv420p -an out.mp4 (GOP court = scrub fluide).",
+    "non_commence": "Aucune ligne de code ecrite pour le 07 a ce stade."
+  },
+
+  "etat_verifie": {
+    "typecheck": "npx tsc --noEmit exit 0",
+    "cablage": "12 elements animes au runtime (1 titre, 1 stats, 1 para, 2 boutons, 5 blocs HUD, 2 fades). exitPRef traverse Scene jusqu'a Destination.",
+    "non_verifie": "Le RENDU. Le port 3000 a ete libere a la demande de Naim pour studio-ai : aucune verification visuelle possible de mon cote."
+  }
+}
